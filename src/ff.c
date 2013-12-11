@@ -96,6 +96,12 @@
 #include "diskio.h"		/* Declarations of low level disk I/O functions */
 
 
+// to avoid warning and possible memory corruption when compiling with
+// optimisation level >= 2
+#if (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 4))
+#pragma GCC optimize("no-strict-aliasing")
+#endif
+
 /*--------------------------------------------------------------------------
 
    Module Private Definitions

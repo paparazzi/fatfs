@@ -1236,6 +1236,7 @@ static DWORD get_fat (		/* 0xFFFFFFFF:Disk error, 1:Internal error, 2..0x7FFFFFF
 				}
 			}
 			/* go to default */
+      /* FALLTHROUGH */
 #endif
 		default:
 			val = 1;	/* Internal error */
@@ -6010,6 +6011,7 @@ FRESULT f_mkfs (
 				}
 				st = 1;			/* Do not compress short run */
 				/* go to next case */
+        /* FALLTHROUGH */
 			case 1:
 				ch = si++;		/* Fill the short run */
 				if (--j == 0) st = 0;

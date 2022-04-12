@@ -1,1 +1,1 @@
-FatFS 0.14 patched for ChibiOS / Paparazzi UAV
+FatFS 0.14b patched for ChibiOS / Paparazzi UAV
